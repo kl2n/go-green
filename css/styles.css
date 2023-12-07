@@ -43,6 +43,7 @@ h3 {
     font-family: "Heebo", sans-serif;
     font-size: 17px;
     color: #003c00;
+    text-transform: uppercase;
 }
 a {
     text-decoration: none;
@@ -153,7 +154,7 @@ body {
 }
 span.border-line {
     display: block;
-    border-bottom: 1px solid #003c00;
+    border-bottom: 2px solid #003c00;
     width: 6%;
     height: 9px;
     margin: 0 auto;
@@ -202,7 +203,7 @@ span.border-line {
 .region-second-left {
     margin-right: 1em;
 }
-.region-second-right {
+.right-text-wrapper {
     padding: 0 4em;
 }
 /* Region Third */
@@ -223,6 +224,7 @@ span.border-line {
     box-sizing: border-box;
     width: 25%;
     border: none;
+    border-radius: 2px;
     margin-bottom: 1.5em;
     box-shadow: 1px 1px 8px 5px rgb(232 235 233);
 }
@@ -231,6 +233,7 @@ span.border-line {
     padding: 10px;
     background: transparent;
     border: 1px solid #003c00;
+    border-radius: 2px;
     display: block;
     margin: 0 auto;
     text-transform: uppercase;
@@ -254,19 +257,17 @@ span.border-line {
     font-weight: 900;
 } */
 .footer-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2em 0;
 }
 .footer-wrapper .social-icons, .footer-wrapper .footer-menu {
-    display: inline-block;
-    vertical-align: middle;
-}
-.footer-wrapper .social-icons {
-    width: 49%;
-    cursor: pointer;
-    padding-left: 15px;
+   width: 50%;
+   cursor: pointer;
 }
 .social-icons span {
     padding: 0px 10px;
@@ -285,8 +286,10 @@ span.border-line {
     color: #E60023;
 }
 .footer-wrapper .footer-menu {
-    width: 49%;
     text-align: right;
+}
+.footer-menu .main-menu ul li:last-child {
+    padding-right: 10px;
 }
 .footer-wrapper .main-menu li button {
     padding: 0;
@@ -323,10 +326,16 @@ span.border-line {
 }
 
 @media only screen and (max-width: 768px) {
+    .footer-wrapper {
+        display: block;
+    }
     .footer-wrapper .social-icons, .footer-wrapper .footer-menu {
         width: 100%;
         text-align: center;
         padding-left: 0;
+    }
+    .footer-menu {
+        padding-bottom: 1em;
     }
     .footer-menu .main-menu ul {
         padding-left: 0;
@@ -348,11 +357,14 @@ span.border-line {
     }
     .region-second .region-second-left, .region-second .region-second-right {
         width: 100%;
+    }
+    .region-second-left {
+        margin-right: 0;
+    }
+    .right-text-wrapper {
+        padding: 0 0 1.5em 0;
         margin-left: 10px;
         margin-right: 10px;
-    }
-    .region-second-right {
-        padding: 0 0 1.5em 0;
     }
     .subscribe-form input#username, .subscribe-form input[type="submit"] {
         width: 100%;
