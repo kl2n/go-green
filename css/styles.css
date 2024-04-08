@@ -149,19 +149,20 @@ body {
     /* transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%); */
 }
+/* Section */
+.region {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 3em 0;
+}
 
 /* Region First */
 .region-body {
     background-color: #3a623a17;
 }
-.region-first {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding-top: 3em;
-}
 .region-first h2 {
     text-align: center;
-    margin: 34px 0 25px 0;
+    margin: 1em 0;
 }
 span.border-line {
     display: block;
@@ -203,7 +204,6 @@ span.border-line {
 /* Region Second */
 .region-second {
     display: flex;
-    margin-top: 3em;
     align-items: center;
     background: #fff;
 }
@@ -213,17 +213,14 @@ span.border-line {
 }
 .region-second-left {
     margin-right: 1em;
+    line-height: 0;
 }
 .right-text-wrapper {
     padding: 0 4em;
 }
 /* Region Third */
 .region-third {
-    padding-top: 3em;
     text-align: center;
-    min-height: 300px;
-    max-width: 1170px;
-    margin: 0 auto;
 }
 .region-third .sub-heading {
     padding-bottom: 1em;
@@ -318,6 +315,23 @@ span.border-line {
         width: 25%;
     }
 }
+@media only screen and (max-width: 1023px) {
+    .region-second {
+        display: revert;
+    }
+    .region-second .region-second-left,
+    .region-second .region-second-right {
+        width: 100%;
+    }
+    .region-second-right {
+        padding: 2em 0;
+    }
+    .right-text-wrapper {
+        padding: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .block-article {
         width: 40%;
@@ -325,9 +339,9 @@ span.border-line {
     .block-article.even {
         margin-right: 12px;
     }
-    .region-second-right {
+    /* .region-second-right {
         padding: 0 1em;
-    }
+    } */
     .subscribe-form input#username {
         width: 40%;
     }
@@ -372,20 +386,6 @@ span.border-line {
     .block-article {
         width: 100%;
         margin-right: 0;
-    }
-    .region-second {
-        display: block;
-    }
-    .region-second .region-second-left, .region-second .region-second-right {
-        width: 100%;
-    }
-    .region-second-left {
-        margin-right: 0;
-    }
-    .right-text-wrapper {
-        padding: 0 0 1.5em 0;
-        margin-left: 10px;
-        margin-right: 10px;
     }
     .subscribe-form input#username, .subscribe-form input[type="submit"] {
         width: 100%;
